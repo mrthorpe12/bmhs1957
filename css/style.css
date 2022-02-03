@@ -1,33 +1,46 @@
+@font-face {
+	font-family: 'CursiveFont';
+	src: url('../fonts/Caveat/Caveat-VariableFont_wght.ttf');
+}
+
 body {
 	margin: 1%;
 	padding: 1%;
 	font-size: 150%;
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+header {
+	background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(127, 190, 115) 25%, rgb(41, 206, 49) 70%, rgb(255, 255, 255) 100%);
 }
 
 h1 {
 	font-size: 2em;
 	font-weight: bold;
+	font-family: 'CursiveFont', cursive;
 }
 
-
-.active {
-	background: white;
-	text-transform: uppercase;
-	text-align: center;
-}
-
-.main-point {
-	font-weight: bold;
+p {
+	font-size: 1em;
 }
 
 img {
-	display: relative;
-	height: 300px;
-	width: 200px;
-	padding: 25px;
-	border-radius: 50px;
+	display: inline-block;
+	height: auto;
+	width: 300px;
+	border: 3px solid black;
 	margin: 10px;
+	padding: 10px;
+	border-radius: 50px;
+}
+
+img:hover {
+	box-shadow: 0 0 20px 1px rgba(0, 140, 186, 0.5);
+}
+
+.content img:nth-child(2n+1) {
+	border-radius: 0px;
+	border: 3px dashed black;
 }
 
 h2 {
@@ -39,19 +52,20 @@ p, h1, h2 {
 	padding: 10px;
 }
 
-
-
 nav li {
-	background-color: #4dff74;
 	padding: 10px;
 	margin: 20px;
 	width: 25%;
-	border: 1px solid black;
-	border-radius: 50px;
 	text-align: center;
 	display: inline-block;
 	width: 20%;
 }
 
+nav li a {
+	color: black;
+	text-decoration: none;
+}
 
-
+nav li.active {
+	text-transform: uppercase;
+}
