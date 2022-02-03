@@ -3,21 +3,37 @@
 	src: url('../fonts/Caveat/Caveat-VariableFont_wght.ttf');
 }
 
-body {
-	margin: 1%;
-	padding: 1%;
-	font-size: 150%;
-	font-family: 'Trebuchet MS', Arial, sans-serif;
+@font-face {
+	font-family: 'PrintFont';
+	src: url('../fonts/Oswald-VariableFont_wght.ttf');
 }
 
-header {
-	background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(127, 190, 115) 25%, rgb(41, 206, 49) 70%, rgb(255, 255, 255) 100%);
+body {
+	padding: 1%;
+	font-size: 1.5em;
+	font-family: 'PrintFont', Arial, sans-serif;
+	position: relative;
+	box-sizing: border-box;
+	top: 80px;
 }
 
 h1 {
 	font-size: 2em;
 	font-weight: bold;
 	font-family: 'CursiveFont', cursive;
+}
+
+header {
+	background-color: #466995;
+	display: block;
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+.content {
+	padding: 20px;
 }
 
 p {
@@ -34,9 +50,10 @@ img {
 	border-radius: 50px;
 }
 
-img:hover {
+.content img:hover {
 	box-shadow: 0 0 20px 1px rgba(0, 140, 186, 0.5);
 }
+
 
 .content img:nth-child(2n+1) {
 	border-radius: 0px;
@@ -68,4 +85,5 @@ nav li a {
 
 nav li.active {
 	text-transform: uppercase;
+	font-weight: bold;
 }
