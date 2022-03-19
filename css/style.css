@@ -13,7 +13,7 @@ body {
 	font-size: 1.5em;
 	font-family: 'PrintFont', Arial, sans-serif;
 	position: relative;
-	box-sizing: border-box;
+	/* box-sizing: border-box; */
 	top: 80px;
 }
 
@@ -21,6 +21,7 @@ h1 {
 	font-size: 2em;
 	font-weight: bold;
 	font-family: 'CursiveFont', cursive;
+	grid-column: 2;
 }
 
 header {
@@ -32,8 +33,14 @@ header {
 	left: 0px;
 }
 
+main {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
 .content {
 	padding: 20px;
+	grid-column: 2;
 }
 
 p {
@@ -41,7 +48,7 @@ p {
 }
 
 img {
-	display: inline-block;
+	/* display: inline-block; */
 	height: auto;
 	width: 300px;
 	border: 3px solid black;
@@ -50,10 +57,13 @@ img {
 	border-radius: 50px;
 }
 
+/* .gallery {
+	grid-column: 1;
+} */
+
 .content img:hover {
 	box-shadow: 0 0 20px 1px rgba(0, 140, 186, 0.5);
 }
-
 
 .content img:nth-child(2n+1) {
 	border-radius: 0px;
@@ -69,18 +79,24 @@ p, h1, h2 {
 	padding: 10px;
 }
 
+.links {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
 nav li {
 	padding: 10px;
 	margin: 20px;
 	width: 25%;
-	text-align: center;
-	display: inline-block;
-	width: 20%;
 }
 
 nav li a {
 	color: black;
 	text-decoration: none;
+	padding: 10px;
+	margin: 20px;
+	width: 25%;
 }
 
 nav li.active {

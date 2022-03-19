@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='css/html5reset.css' rel="stylesheet">
+    <link href='css/style.css' rel="stylesheet">
+    <link href='images/favicon.ico' rel="icon">
+    <title>Homepage</title>
+</head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SXTSG1NG3E"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SXTSG1NG3E');
+</script>
+
+<body>
+    <header>
+        <nav>
+            <ul class="links">
+                <li><a href='index.html'>Homepage</a></li>
+                <li><a href='barcelona.html'>Barcelona</a></li>
+                <li><a href='madrid.html'>Madrid</a></li>
+                <li><a href='sevilla.html'>Sevilla</a></li>
+                <li class="active"><a href='contact.html'>Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <form action="https://formspree.io/f/xeqnzgrw" method="POST">
+                <label>
+                    Your email:
+                    <input type="email" name="email">
+                </label>
+                <br>
+                <label>
+                    Your name:
+                    <input type="text" name="name"></textarea>
+                </label>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
