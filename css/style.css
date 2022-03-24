@@ -96,6 +96,10 @@ img {
 	animation-duration: 3s;
 }
 
+#skip {
+	display: relative;
+	right: 0px;
+}
 
 .topnav li, .topnav p {
 	padding: 10px;
@@ -121,6 +125,12 @@ img {
 	flex-direction: column;
 	justify-content: center;
 	/* align-items: center; */
+}
+
+@media (prefers-reduced-motion) {
+	.content img:nth-child(2n+1) {
+		animation: none;
+	}
 }
 
 @media (min-width: 1000px) {
