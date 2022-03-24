@@ -67,7 +67,7 @@ p {
 main {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	padding: 200px;
+	padding: 600px;
 }
 
 .content {
@@ -103,12 +103,7 @@ img {
 	width: 25%;
 }
 
-.dropdown-content {
-	display: none;
-	position: relative;
-}
-
-.topnav p, .dropdown-content a {
+.topnav p, .topnav a {
 	color: black;
 	text-decoration: none;
 	padding: 10px;
@@ -116,12 +111,12 @@ img {
 	width: 25%;
 }
 
-.dropdown-content li.active {
+.topnav li.active {
 	text-transform: uppercase;
 	font-weight: bold;
 }
 
-.dropdown:hover .dropdown-content {
+.topnav ul {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -129,7 +124,12 @@ img {
 }
 
 @media (min-width: 1000px) {
-	.dropdown:hover .dropdown-content {
+	main {
+		padding: 200px;
+	}
+
+	.topnav ul {
+		display: flex;
 		flex-direction: row;
 		justify-content: center;
 	}
