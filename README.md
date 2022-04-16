@@ -1,2 +1,2 @@
-# portfolio-content2
-Checkpoint - Simple HTML and CSS
+# SI 539 Final Portfolio
+Final portfolio for SI 539 (instructor: Colleen van Lent).  Portfolio contains information related to the author's trip to Spain in summer 2018.  Incorporates grid and flexbox.
