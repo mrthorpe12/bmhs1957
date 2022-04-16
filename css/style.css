@@ -11,136 +11,131 @@
 @keyframes slidein {
 	from {
 		margin-left: 100%;
-		width: 300%;
+		width: 10px;
 	}
 
 	to {
 		margin-left: 0%;
-		width: 100%;
+		width: 300px;
 	}
 }
 
 body {
-	background: url('../images/sevilla_alley.JPG');
-	background-repeat: no-repeat;
-	background-size: auto;
-	padding: 1%;
-	font-size: 1.5em;
 	font-family: 'PrintFont', Arial, sans-serif;
-	position: relative;
-	/* box-sizing: border-box; */
-	top: 80px;
+	font-size: 1.5em;
 }
 
 h1 {
 	font-size: 2em;
 	font-weight: bold;
 	font-family: 'CursiveFont', cursive;
-	grid-column: 2;
 }
 
-h2 {
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #466995;
+	color: black;
+	margin-bottom: 40px;
+	padding: 2%;
+}
+
+nav {
+	text-align: center;
+	margin: 10px;
 	font-size: 1em;
-	font-weight: bold;
 }
 
-p, h1, h2 {
-	padding: 10px;
+nav ul {
+	padding: 5px;
+}
+
+nav li {
+	padding: 5px;
+	width: auto;
+	display: inline-block;
+	border-radius: 2px;
 }
 
 p {
+	text-align: center;
+	margin-bottom: 3vh;
 	font-size: 1em;
 }
 
-.topnav {
-	background-color: #466995;
-	position: fixed;
-	display: flex;
-	flex-direction: row;
-	justify-content: baseline;
-	width: 100%;
-	height: fit-content;
-	top: 0px;
-	left: 0px;
+nav a {
+	color: black;
+	text-decoration: none;
 }
 
-main {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	padding: 600px;
+nav a:hover {
+	text-transform: uppercase;
+	color: white;
 }
 
-.content {
-	grid-column: 2;
+li.active {
+	font-size: 1.1em;
+	font-weight: bold;
+	text-transform: uppercase;
 }
-
 
 img {
-	/* display: inline-block; */
-	height: auto;
-	width: 300px;
 	border: 3px solid black;
 	margin: 10px;
-	padding: 10px;
-	border-radius: 50px;
+	border-radius: 20px;
+	/* padding: 10px; */
+	height: 300px;
+	width: 300px;
+	object-fit: cover;
+	overflow: scroll;
 }
 
-.content img:hover {
+img:hover {
 	box-shadow: 0 0 20px 1px rgba(0, 140, 186, 0.5);
 }
 
-.content img:nth-child(2n+1) {
+.skip {
+	color: black;
+	position: fixed;
+	left: -500px;
+}
+
+.skip:focus {
+	background-color: black;
+	color: white;
+	left: 10px;
+	z-index: 1;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: 1fr;
+	border-radius: 10px;
+	justify-items: center;
+	margin: 10px;
+}
+
+.home_img {
+	animation-name: slidein;
+	animation-duration: 4s;
+}
+
+/* .content img:nth-child(2n+1) {
 	border-radius: 0px;
 	border: 3px dashed black;
 	animation-name: slidein;
 	animation-duration: 3s;
-}
-
-#skip {
-	display: relative;
-	right: 0px;
-}
-
-.topnav li, .topnav p {
-	padding: 10px;
-	margin: 20px;
-	width: 25%;
-}
-
-.topnav p, .topnav a {
-	color: black;
-	text-decoration: none;
-	padding: 10px;
-	margin: 20px;
-	width: 25%;
-}
-
-.topnav li.active {
-	text-transform: uppercase;
-	font-weight: bold;
-}
-
-.topnav ul {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	/* align-items: center; */
-}
+} */
 
 @media (prefers-reduced-motion) {
-	.content img:nth-child(2n+1) {
+	.home_img {
+		animation-name: none;
+	}
+
+	/* .content img:nth-child(2n+1) {
 		animation: none;
-	}
+	} */
 }
 
-@media (min-width: 1000px) {
-	main {
-		padding: 200px;
-	}
-
-	.topnav ul {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-	}
-}
+@media (min-width: 1000px) {}
