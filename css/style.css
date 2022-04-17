@@ -114,6 +114,10 @@ img:hover {
 	text-align: center;
 }
 
+.fa-solid {
+	margin: 10px;
+}
+
 .gallery {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -184,6 +188,7 @@ img:hover {
 	animation-name: slidein;
 	animation-duration: 4s;
 }
+
 
 @media (prefers-reduced-motion) {
 	.home_img {
