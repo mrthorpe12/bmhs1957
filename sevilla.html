@@ -19,6 +19,18 @@
 
     gtag('config', 'G-SXTSG1NG3E');
 </script>
+<script>
+    function showText(img) {
+        console.log(img.alt);
+        let caption = document.querySelector(`#${img.id}_caption`);
+        caption.style.display = "block";
+        caption.innerHTML = img.alt;
+    }
+    function hideText(img) {
+        let caption = document.querySelector(`#${img.id}_caption`);
+        caption.style.display = "none";
+    }
+</script>
 
 <body>
     <a class="skip" href="#main">Skip to Content</a>
@@ -70,15 +82,51 @@
                 which many of these towns command.[3]</p>
         </div>
         <div class="gallery">
-            <img src='images/alhambra3.JPG' alt="Alhambra fortress, Grenada.  Summer 2018.">
-            <img src='images/sevilla_alley.JPG' alt="Whitewashed alleyway in Sevilla, Spain.  Summer 2018.">
-            <img src='images/sevilla_buildings.JPG' alt="Row of buildings on city square, Sevilla.  Summer 2018.">
-            <img src='images/sevilla_carriages.JPG' alt="Horse-drawn carriages in Sevilla city square.  Summer 2018.">
-            <img src='images/sevilla_fountain.JPG' alt="City square with fountain, Sevilla.  Summer 2018.">
-            <img src='images/sevilla_peacock.JPG' alt="Peacock in Sevilla city park.  Summer 2018.">
-            <img src='images/sevilla_plaza.JPG' alt="Main plaza with church in background, Sevilla.  Summer 2018.">
-            <img src='images/arcos_street.JPG' alt="Street in Andalusian hill town.  Summer 2018.">
-            <img src='images/arcos_landscape.JPG' alt="Andalusian landscape viewed from scenic overlook.  Summer 2018.">
+            <div>
+                <img src='images/alhambra3.JPG' id="alhambra" onmouseover="showText(this)" onmouseleave="hideText(this)"
+                    alt="Alhambra fortress, Grenada.  Summer 2018.">
+                <div id="alhambra_caption" style.display="none"></div>
+            </div>
+            <div>
+                <img src='images/sevilla_alley.JPG' id="alley" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Whitewashed alleyway in Sevilla, Spain.  Summer 2018.">
+                <div id="alley_caption" style.display="none"></div>
+            </div>
+            <div>
+                <img src='images/sevilla_buildings.JPG' id="buildings" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Row of buildings on city square, Sevilla.  Summer 2018.">
+                <div id="buildings_caption" style.display="none"></div>
+            </div>
+            <div>
+                <img src='images/sevilla_carriages.JPG' id="carriages" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Horse-drawn carriages in Sevilla city square.  Summer 2018.">
+                <div id="carriages_caption" style.display="none"></div>
+            </div>
+            <div>
+                <img src='images/sevilla_fountain.JPG' id="fountain" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="City square with fountain, Sevilla.  Summer 2018.">
+                <div id="fountain_caption" style.display="none"></div>
+            </div>
+            <div>
+                <img src='images/sevilla_peacock.JPG' id="peacock" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Peacock in Sevilla city park.  Summer 2018.">
+                <div id="peacock_caption" style.display="none"></div>
+            </div>
+            <div>
+                <img src='images/sevilla_plaza.JPG' id="plaza" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Main plaza with church in background, Sevilla.  Summer 2018.">
+                <div id="plaza_caption" style.display="none"></div>
+            </div>
+            <div>
+                <img src='images/arcos_street.JPG' id="street" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Street in Andalusian hill town.  Summer 2018.">
+                <div id="street_caption" style.display="none"></div>
+            </div>
+            <div>
+                <img src='images/arcos_landscape.JPG' id="landscape" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Andalusian landscape viewed from scenic overlook.  Summer 2018.">
+                <div id="landscape_caption" style.display="none"></div>
+            </div>
         </div>
     </main>
     <footer>

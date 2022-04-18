@@ -19,6 +19,18 @@
 
     gtag('config', 'G-SXTSG1NG3E');
 </script>
+<script>
+    function showText(img) {
+        console.log(img.alt);
+        let caption = document.querySelector(`#${img.id}_caption`);
+        caption.style.display = "block";
+        caption.innerHTML = img.alt;
+    }
+    function hideText(img) {
+        let caption = document.querySelector(`#${img.id}_caption`);
+        caption.style.display = "none";
+    }
+</script>
 
 <body>
     <a class="skip" href="#main">Skip to Content</a>
@@ -51,16 +63,51 @@
                 alike.</p>
         </div>
         <div class="gallery">
-            <img src='images/madrid_plazamayor.JPG' alt="Image of Plaza Mayor, Madrid.  Summer 2018.">
-            <img src="images/madrid_florist.JPG" alt="Madrid flower shop.  Summer 2018.">
-            <img src="images/madrid_garden.JPG" alt="Public garden in Madrid.  Summer 2018.">
-            <img src="images/madrid_garden2.JPG" alt="Botanical gardens entrance, Madrid.  Summer 2018.">
-            <img src="images/madrid_outdoor_cafe.JPG" alt="Outdoor cafe in central Madrid.  Summer 2018.">
-            <img src="images/madrid_park_boaters.JPG" alt="City park with boaters, central Madrid.  Summer 2018.">
-            <img src="images/madrid_plazamayor.JPG" alt="Plaza Mayor, Madrid.  Summer 2018.">
-            <img src="images/madrid_royal_palace.JPG" alt="Royal palace, Madrid.  Summer 2018.">
-            <img src="images/madrid_street.JPG" alt="Boulevard with pedestrians, central Madrid.  Sumer 2018.">
-            <img src="images/madrid_walkway.JPG" alt="Covered walkway, central Madrid.  Summer 2018.">
+            <div>
+                <img src='images/madrid_plazamayor.JPG' id="plaza" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Image of Plaza Mayor, Madrid.  Summer 2018.">
+                <div id="plaza_caption" style.display="none"></div>
+            </div>
+            <div>
+                <img src="images/madrid_florist.JPG" id="florist" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Madrid flower shop.  Summer 2018.">
+                <div id="florist_caption" style.display="none"></div>
+            </div>
+            <div>
+                <img src="images/madrid_garden.JPG" id="garden" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Public garden in Madrid.  Summer 2018.">
+                <div id="garden_caption" style.display="none"></div>
+            </div>
+            <div>
+                <img src="images/madrid_garden2.JPG" id="garden2" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Botanical gardens entrance, Madrid.  Summer 2018.">
+                <div id="garden2_caption" style.display="none"></div>
+            </div>
+            <div>
+                <img src="images/madrid_outdoor_cafe.JPG" id="cafe" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Outdoor cafe in central Madrid.  Summer 2018.">
+                <div id="cafe_caption" style.display="none"></div>
+            </div>
+            <div>
+                <img src="images/madrid_park_boaters.JPG" id="park" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="City park with boaters, central Madrid.  Summer 2018.">
+                <div id="park_caption" style.display="none"></div>
+            </div>
+            <div>
+                <img src="images/madrid_royal_palace.JPG" id="palace" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Royal palace, Madrid.  Summer 2018.">
+                <div id="palace_caption" style.display="none"></div>
+            </div>
+            <div>
+                <img src="images/madrid_street.JPG" id="street" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Boulevard with pedestrians, central Madrid.  Sumer 2018.">
+                <div id="street_caption" style.display="none"></div>
+            </div>
+            <div>
+                <img src="images/madrid_walkway.JPG" id="walkway" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Covered walkway, central Madrid.  Summer 2018.">
+                <div id="walkway_caption" style.display="none"></div>
+            </div>
         </div>
     </main>
     <footer>
