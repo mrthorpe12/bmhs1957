@@ -230,4 +230,8 @@ img:hover {
 		justify-items: center;
 		margin: 20px;
 	}
+
+	img:last-child:nth-child(even) {
+		grid-column: 2;
+	}
 }
