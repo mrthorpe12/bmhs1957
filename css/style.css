@@ -118,6 +118,19 @@ img:hover {
 	margin: 10px;
 }
 
+.contact_gallery {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 20px;
+}
+
+.contact_gallery img {
+	border: none;
+	height: auto;
+	width: 300px;
+}
+
 .gallery {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -210,6 +223,20 @@ img:hover {
 		width: 200px;
 	}
 
+	.contact_gallery {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 20px;
+	}
+
+	.contact_gallery img {
+		border: none;
+		height: auto;
+		width: 200px;
+	}
+
 	.gallery {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -225,6 +252,20 @@ img:hover {
 @media screen and (min-width: 1200px) {
 	img {
 		height: 350px;
+		width: 350px;
+	}
+
+	.contact_gallery {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 20px;
+	}
+
+	.contact_gallery img {
+		border: none;
+		height: auto;
 		width: 350px;
 	}
 
