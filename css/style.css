@@ -216,12 +216,16 @@ img:hover {
 		justify-items: center;
 		margin: 20px;
 	}
+
+	.wrapper:last-child {
+		grid-column: 1 / span 2;
+	}
 }
 
 @media screen and (min-width: 1200px) {
 	img {
-		height: 300px;
-		width: 300px;
+		height: 350px;
+		width: 350px;
 	}
 
 	.gallery {
@@ -231,7 +235,15 @@ img:hover {
 		margin: 20px;
 	}
 
-	img:last-child:nth-child(even) {
+	.wrapper:nth-child(3n+1) {
+		grid-column: 1;
+	}
+
+	.wrapper:nth-child(3n+2) {
+		grid-column: 3;
+	}
+
+	.wrapper:nth-child(3n) {
 		grid-column: 2;
 	}
 }
