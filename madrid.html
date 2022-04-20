@@ -19,10 +19,23 @@
 
     gtag('config', 'G-SXTSG1NG3E');
 </script>
+<script>
+    function showText(img) {
+        console.log(img.alt);
+        let caption = document.querySelector(`#${img.id}_caption`);
+        caption.style.display = "block";
+        caption.innerHTML = img.alt;
+    }
+    function hideText(img) {
+        let caption = document.querySelector(`#${img.id}_caption`);
+        caption.style.display = "none";
+    }
+</script>
 
 <body>
+    <a class="skip" href="#main">Skip to Content</a>
     <header>
-        <div class="topnav">
+        <nav>
             <ul>
                 <li><i class="fa-solid fa-house"></i><a href='index.html'>Homepage</a></li>
                 <li><a href='barcelona.html'>Barcelona</a></li>
@@ -30,10 +43,9 @@
                 <li><a href='sevilla.html'>Sevilla</a></li>
                 <li><a href='contact.html'>Contact Me</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
     <main>
-        <li id="skip"><a href="#main">Skip to Content</a></li>
         <h1>Madrid</h1>
         <div class="content">
             <p>From Barcelona, I traveled via train to Madrid, the capital of Spain. Home to over 3 million residents,
@@ -45,7 +57,57 @@
                 Philip III, the Plaza Mayor is a vibrant hub within the old city center, home to upscale restaurants and
                 shops.[1]
             </p>
-            <img src='images/madrid_plazamayor.JPG' alt="Image of Plaza Mayor, Madrid.  Summer 2018.">
+            <p>Another point of interest is the Palacio Real, or Royal Palace. Home to the Spanish royal family, the
+                palace is open for guided tours and is a major attraction.</p>
+            <p>Leisure opportunities are never far. The city's streets, parks, and gardens attracts visitors and locals
+                alike.</p>
+        </div>
+        <div class="gallery">
+            <div class="wrapper">
+                <img src='images/madrid_plazamayor.JPG' id="plaza" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Image of Plaza Mayor, Madrid.  Summer 2018.">
+                <div id="plaza_caption" style.display="none"></div>
+            </div>
+            <div class="wrapper">
+                <img src="images/madrid_florist.JPG" id="florist" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Madrid flower shop.  Summer 2018.">
+                <div id="florist_caption" style.display="none"></div>
+            </div>
+            <div class="wrapper">
+                <img src="images/madrid_garden.JPG" id="garden" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Public garden in Madrid.  Summer 2018.">
+                <div id="garden_caption" style.display="none"></div>
+            </div>
+            <div class="wrapper">
+                <img src="images/madrid_garden2.JPG" id="garden2" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Botanical gardens entrance, Madrid.  Summer 2018.">
+                <div id="garden2_caption" style.display="none"></div>
+            </div>
+            <div class="wrapper">
+                <img src="images/madrid_outdoor_cafe.JPG" id="cafe" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Outdoor cafe in central Madrid.  Summer 2018.">
+                <div id="cafe_caption" style.display="none"></div>
+            </div>
+            <div class="wrapper">
+                <img src="images/madrid_park_boaters.JPG" id="park" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="City park with boaters, central Madrid.  Summer 2018.">
+                <div id="park_caption" style.display="none"></div>
+            </div>
+            <div class="wrapper">
+                <img src="images/madrid_royal_palace.JPG" id="palace" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Royal palace, Madrid.  Summer 2018.">
+                <div id="palace_caption" style.display="none"></div>
+            </div>
+            <div class="wrapper">
+                <img src="images/madrid_street.JPG" id="street" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Boulevard with pedestrians, central Madrid.  Sumer 2018.">
+                <div id="street_caption" style.display="none"></div>
+            </div>
+            <div class="wrapper">
+                <img src="images/madrid_walkway.JPG" id="walkway" onmouseover="showText(this)"
+                    onmouseleave="hideText(this)" alt="Covered walkway, central Madrid.  Summer 2018.">
+                <div id="walkway_caption" style.display="none"></div>
+            </div>
         </div>
     </main>
     <footer>

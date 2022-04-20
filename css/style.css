@@ -11,136 +11,301 @@
 @keyframes slidein {
 	from {
 		margin-left: 100%;
-		width: 300%;
+		width: 10px;
 	}
 
 	to {
 		margin-left: 0%;
-		width: 100%;
+		width: 300px;
 	}
 }
 
 body {
-	background: url('../images/sevilla_alley.JPG');
-	background-repeat: no-repeat;
-	background-size: auto;
-	padding: 1%;
-	font-size: 1.5em;
 	font-family: 'PrintFont', Arial, sans-serif;
-	position: relative;
-	/* box-sizing: border-box; */
-	top: 80px;
+	font-size: 1.5em;
 }
 
 h1 {
 	font-size: 2em;
 	font-weight: bold;
 	font-family: 'CursiveFont', cursive;
-	grid-column: 2;
+	text-align: center;
 }
 
-h2 {
-	font-size: 1em;
-	font-weight: bold;
-}
-
-p, h1, h2 {
-	padding: 10px;
-}
-
-p {
-	font-size: 1em;
-}
-
-.topnav {
-	background-color: #466995;
-	position: fixed;
-	display: flex;
-	flex-direction: row;
-	justify-content: baseline;
-	width: 100%;
-	height: fit-content;
-	top: 0px;
-	left: 0px;
-}
-
-main {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	padding: 600px;
-}
-
-.content {
-	grid-column: 2;
-}
-
-
-img {
-	/* display: inline-block; */
-	height: auto;
-	width: 300px;
-	border: 3px solid black;
-	margin: 10px;
-	padding: 10px;
-	border-radius: 50px;
-}
-
-.content img:hover {
-	box-shadow: 0 0 20px 1px rgba(0, 140, 186, 0.5);
-}
-
-.content img:nth-child(2n+1) {
-	border-radius: 0px;
-	border: 3px dashed black;
-	animation-name: slidein;
-	animation-duration: 3s;
-}
-
-#skip {
-	display: relative;
-	right: 0px;
-}
-
-.topnav li, .topnav p {
-	padding: 10px;
-	margin: 20px;
-	width: 25%;
-}
-
-.topnav p, .topnav a {
-	color: black;
-	text-decoration: none;
-	padding: 10px;
-	margin: 20px;
-	width: 25%;
-}
-
-.topnav li.active {
-	text-transform: uppercase;
-	font-weight: bold;
-}
-
-.topnav ul {
+header {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	/* align-items: center; */
+	background-color: #466995;
+	color: black;
+	margin-bottom: 40px;
+	padding: 2%;
+}
+
+nav {
+	text-align: center;
+	margin: 10px;
+	font-size: 1em;
+}
+
+nav ul {
+	padding: 5px;
+}
+
+nav li {
+	padding: 5px;
+	width: auto;
+	display: inline-block;
+	border-radius: 2px;
+}
+
+p {
+	text-align: center;
+	margin-bottom: 3vh;
+	font-size: 1em;
+}
+
+nav a {
+	color: black;
+	text-decoration: none;
+}
+
+nav a:hover {
+	text-transform: uppercase;
+	color: white;
+}
+
+li.active {
+	font-size: 1.1em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+img {
+	border: 3px solid black;
+	margin: 10px;
+	border-radius: 20px;
+	/* padding: 10px; */
+	height: 300px;
+	width: 300px;
+	object-fit: cover;
+	overflow: scroll;
+}
+
+img:hover {
+	box-shadow: 0 0 20px 1px rgba(0, 140, 186, 0.5);
+}
+
+.skip {
+	color: black;
+	position: fixed;
+	left: -500px;
+}
+
+.skip:focus {
+	background-color: black;
+	color: white;
+	left: 10px;
+	z-index: 1;
+}
+
+.content {
+	margin: 10px;
+	text-align: center;
+}
+
+.fa-solid {
+	margin: 10px;
+}
+
+.contact_gallery {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 20px;
+}
+
+.contact_gallery img {
+	border: none;
+	height: auto;
+	width: 300px;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: 1fr;
+	border-radius: 10px;
+	justify-items: center;
+	margin: 10px;
+}
+
+.flip-card {
+	background-color: transparent;
+	padding: 20px;
+	height: 150px;
+	width: 150px;
+	text-align: center;
+	perspective: 1000px;
+	margin: 0 auto;
+}
+
+.flip-inner {
+	border: 3px solid black;
+	border-radius: 5px;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+	transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+	position: absolute;
+	height: 100%;
+	min-width: 100%;
+	backface-visibility: hidden;
+}
+
+.flip-front {
+	background-color: #bbb;
+	color: black;
+}
+
+.flip-front img {
+	border: none;
+	border-radius: 0px;
+	margin: 0px;
+	padding: 0px;
+	background-color: none;
+	height: 150px;
+	width: 150px;
+	object-fit: cover;
+	overflow: scroll;
+}
+
+.flip-back {
+	background-color: dodgerblue;
+	color: black;
+	transform: rotateY(180deg);
+	overflow: hidden;
+	font-size: 0.75em;
+}
+
+.home_img {
+	animation-name: slidein;
+	animation-duration: 4s;
+}
+
+.parallax {
+	background-image: url("../images/granada_cafe.JPG");
+
+	min-height: 500px;
+
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 @media (prefers-reduced-motion) {
-	.content img:nth-child(2n+1) {
-		animation: none;
+	.home_img {
+		animation-name: none;
+	}
+
+	.flip-card:hover .flip-inner {
+		transform: none;
+	}
+
+	.flip-card:focus .flip-inner {
+		transform: none;
+	}
+
+	.parallax {
+		overflow: hidden;
 	}
 }
 
-@media (min-width: 1000px) {
-	main {
-		padding: 200px;
+@media screen and (min-width: 600px) {
+	img {
+		height: 200px;
+		width: 200px;
 	}
 
-	.topnav ul {
+	.contact_gallery {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
+		flex-wrap: wrap;
+		margin: 20px;
+	}
+
+	.contact_gallery img {
+		border: none;
+		height: auto;
+		width: 200px;
+	}
+
+	.gallery {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-items: center;
+		margin: 20px;
+	}
+
+	.home_img {
+		grid-column: 1 / span 2;
+	}
+
+	.wrapper:last-child {
+		grid-column: 1 / span 2;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	img {
+		height: 350px;
+		width: 350px;
+	}
+
+	.contact_gallery {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 20px;
+	}
+
+	.contact_gallery img {
+		border: none;
+		height: auto;
+		width: 350px;
+	}
+
+	.gallery {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		justify-items: center;
+		margin: 20px;
+	}
+
+	.home_img {
+		grid-column: 2;
+	}
+
+	.wrapper:nth-child(3n+1) {
+		grid-column: 1;
+	}
+
+	.wrapper:nth-child(3n+2) {
+		grid-column: 3;
+	}
+
+	.wrapper:nth-child(3n) {
+		grid-column: 2;
 	}
 }

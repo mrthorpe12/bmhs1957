@@ -19,10 +19,16 @@
 
     gtag('config', 'G-SXTSG1NG3E');
 </script>
+<script>
+    function flipOver() {
+        document.querySelector('.flip-inner').style.transform = 'rotateY(180deg)';
+    }
+</script>
 
 <body>
+    <a class="skip" href="#main">Skip to Content</a>
     <header>
-        <div class="topnav">
+        <nav>
             <ul>
                 <li class='active'><i class="fa-solid fa-house"></i><a href='index.html'>Homepage</a></li>
                 <li><a href='barcelona.html'>Barcelona</a></li>
@@ -30,10 +36,10 @@
                 <li><a href='sevilla.html'>Sevilla</a></li>
                 <li><a href='contact.html'>Contact Me</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
     <main>
-        <li id="skip"><a href="#main">Skip to Content</a></li>
+        <div class="parallax"></div>
         <h1>My Trip to Spain</h1>
         <div class="content">
             <p>Of the places I've visited, Spain is undoubtedly one of the most fascinating. A country rich in history,
@@ -49,8 +55,22 @@
             <p>Feel free to look at the pictures on each of the linked pages! Hopefully you'll get a sense of Spain and
                 its
                 culture.</p>
-
-            <img src='images/sevilla_belltower.JPG' alt="Bell tower and sunset, Sevilla, Spain. Summer 2018.">
+        </div>
+        <div class="gallery">
+            <img class="home_img" src='images/sevilla_belltower.JPG'
+                alt="Bell tower and sunset, Sevilla, Spain. Summer 2018.">
+        </div>
+        <div class="flip-card" tabindex="0" onkeydown="flipOver()">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <img src="images/headshot.jpg" alt="Personal headshot" />
+                </div>
+                <div class="flip-back">
+                    <p>Maxwell Thorpe</p>
+                    <p>UMSI 2023</p>
+                    <p>User-Centered Agile Development</p>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
