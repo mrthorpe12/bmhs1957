@@ -202,6 +202,16 @@ img:hover {
 	animation-duration: 4s;
 }
 
+.parallax {
+	background-image: url("../images/granada_cafe.JPG");
+
+	min-height: 500px;
+
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 @media (prefers-reduced-motion) {
 	.home_img {
@@ -214,6 +224,10 @@ img:hover {
 
 	.flip-card:focus .flip-inner {
 		transform: none;
+	}
+
+	.parallax {
+		overflow: hidden;
 	}
 }
 
