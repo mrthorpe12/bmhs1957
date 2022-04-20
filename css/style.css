@@ -203,9 +203,7 @@ img:hover {
 
 .parallax {
 	background-image: url("../images/granada_cafe.JPG");
-
 	min-height: 500px;
-
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
