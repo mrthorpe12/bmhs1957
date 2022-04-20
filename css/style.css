@@ -197,7 +197,6 @@ img:hover {
 }
 
 .home_img {
-	grid-column: 2;
 	animation-name: slidein;
 	animation-duration: 4s;
 }
@@ -258,6 +257,10 @@ img:hover {
 		margin: 20px;
 	}
 
+	.home_img {
+		grid-column: 1 / span 2;
+	}
+
 	.wrapper:last-child {
 		grid-column: 1 / span 2;
 	}
@@ -288,6 +291,10 @@ img:hover {
 		grid-template-columns: 1fr 1fr 1fr;
 		justify-items: center;
 		margin: 20px;
+	}
+
+	.home_img {
+		grid-column: 2;
 	}
 
 	.wrapper:nth-child(3n+1) {
