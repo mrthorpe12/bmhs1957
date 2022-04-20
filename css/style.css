@@ -36,7 +36,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: lightblue;
+	background-color: #466995;
 	color: black;
 	margin-bottom: 40px;
 	padding: 2%;
@@ -190,7 +190,7 @@ img:hover {
 
 .flip-back {
 	background-color: dodgerblue;
-	color: white;
+	color: black;
 	transform: rotateY(180deg);
 	overflow: hidden;
 	font-size: 0.75em;
