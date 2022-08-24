@@ -10,52 +10,92 @@
     <title>80th Birthday</title>
 </head>
 
-<div class="gallery">
-    <div class="wrapper">
-        <img src='../images/alhambra3.JPG' id="alhambra" onmouseover="showText(this)" onmouseleave="hideText(this)"
-            alt="Alhambra fortress, Grenada.  Summer 2018.">
-        <div id="alhambra_caption" style.display="none"></div>
+<script>
+    function showText(img) {
+        console.log(img.alt);
+        let caption = document.querySelector(`#${img.id}_caption`);
+        caption.style.display = "block";
+        caption.innerHTML = img.alt;
+    }
+    function hideText(img) {
+        let caption = document.querySelector(`#${img.id}_caption`);
+        caption.style.display = "none";
+    }
+</script>
+
+<body>
+    <a class="skip" href="#main">Skip to Content</a>
+    <header>
+        <nav>
+            <ul>
+                <li><i class="fa-solid fa-house"></i><a href='index.html'>Homepage</a></li>
+                <li><a href='yearbook.html'>Yearbook</a></li>
+                <li><a href='memories.html'>Memories</a></li>
+                <li><a href='people.html'>People</a></li>
+                <li><a href='contact.html'>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+<main>
+    <h1>Jim and Roz Thorpe's 80th Birthday Party</h1>
+    <div class="content">
+        <ul>
+            <li>Date: September 28, 2019</li>
+            <li>Venue: Domenico's Italian Restaurant</li>
+            <li>Address: 618 4th Street, Beloit, WI 53511</li>
+            <li>Attendees: 79</li>
+        </ul>
     </div>
-    <div class="wrapper">
-        <img src='../images/sevilla_alley.JPG' id="alley" onmouseover="showText(this)" onmouseleave="hideText(this)"
-            alt="Whitewashed alleyway in Sevilla, Spain.  Summer 2018.">
-        <div id="alley_caption" style.display="none"></div>
+
+    <div class="gallery">
+        <div class="wrapper">
+            <img src='../images/alhambra3.JPG' id="alhambra" onmouseover="showText(this)" onmouseleave="hideText(this)"
+                alt="Alhambra fortress, Grenada.  Summer 2018.">
+            <div id="alhambra_caption" style.display="none"></div>
+        </div>
+        <div class="wrapper">
+            <img src='../images/sevilla_alley.JPG' id="alley" onmouseover="showText(this)" onmouseleave="hideText(this)"
+                alt="Whitewashed alleyway in Sevilla, Spain.  Summer 2018.">
+            <div id="alley_caption" style.display="none"></div>
+        </div>
+        <div class="wrapper">
+            <img src='../images/sevilla_buildings.JPG' id="buildings" onmouseover="showText(this)"
+                onmouseleave="hideText(this)" alt="Row of buildings on city square, Sevilla.  Summer 2018.">
+            <div id="buildings_caption" style.display="none"></div>
+        </div>
+        <div class="wrapper">
+            <img src='../images/sevilla_carriages.JPG' id="carriages" onmouseover="showText(this)"
+                onmouseleave="hideText(this)" alt="Horse-drawn carriages in Sevilla city square.  Summer 2018.">
+            <div id="carriages_caption" style.display="none"></div>
+        </div>
+        <div class="wrapper">
+            <img src='../images/sevilla_fountain.JPG' id="fountain" onmouseover="showText(this)"
+                onmouseleave="hideText(this)" alt="City square with fountain, Sevilla.  Summer 2018.">
+            <div id="fountain_caption" style.display="none"></div>
+        </div>
+        <div class="wrapper">
+            <img src='../images/sevilla_peacock.JPG' id="peacock" onmouseover="showText(this)"
+                onmouseleave="hideText(this)" alt="Peacock in Sevilla city park.  Summer 2018.">
+            <div id="peacock_caption" style.display="none"></div>
+        </div>
+        <div class="wrapper">
+            <img src='../images/sevilla_plaza.JPG' id="plaza" onmouseover="showText(this)" onmouseleave="hideText(this)"
+                alt="Main plaza with church in background, Sevilla.  Summer 2018.">
+            <div id="plaza_caption" style.display="none"></div>
+        </div>
+        <div class="wrapper">
+            <img src='../images/arcos_street.JPG' id="street" onmouseover="showText(this)" onmouseleave="hideText(this)"
+                alt="Street in Andalusian hill town.  Summer 2018.">
+            <div id="street_caption" style.display="none"></div>
+        </div>
+        <div class="wrapper">
+            <img src='../images/arcos_landscape.JPG' id="landscape" onmouseover="showText(this)"
+                onmouseleave="hideText(this)" alt="Andalusian landscape viewed from scenic overlook.  Summer 2018.">
+            <div id="landscape_caption" style.display="none"></div>
+        </div>
     </div>
-    <div class="wrapper">
-        <img src='../images/sevilla_buildings.JPG' id="buildings" onmouseover="showText(this)"
-            onmouseleave="hideText(this)" alt="Row of buildings on city square, Sevilla.  Summer 2018.">
-        <div id="buildings_caption" style.display="none"></div>
-    </div>
-    <div class="wrapper">
-        <img src='../images/sevilla_carriages.JPG' id="carriages" onmouseover="showText(this)"
-            onmouseleave="hideText(this)" alt="Horse-drawn carriages in Sevilla city square.  Summer 2018.">
-        <div id="carriages_caption" style.display="none"></div>
-    </div>
-    <div class="wrapper">
-        <img src='../images/sevilla_fountain.JPG' id="fountain" onmouseover="showText(this)"
-            onmouseleave="hideText(this)" alt="City square with fountain, Sevilla.  Summer 2018.">
-        <div id="fountain_caption" style.display="none"></div>
-    </div>
-    <div class="wrapper">
-        <img src='../images/sevilla_peacock.JPG' id="peacock" onmouseover="showText(this)" onmouseleave="hideText(this)"
-            alt="Peacock in Sevilla city park.  Summer 2018.">
-        <div id="peacock_caption" style.display="none"></div>
-    </div>
-    <div class="wrapper">
-        <img src='../images/sevilla_plaza.JPG' id="plaza" onmouseover="showText(this)" onmouseleave="hideText(this)"
-            alt="Main plaza with church in background, Sevilla.  Summer 2018.">
-        <div id="plaza_caption" style.display="none"></div>
-    </div>
-    <div class="wrapper">
-        <img src='../images/arcos_street.JPG' id="street" onmouseover="showText(this)" onmouseleave="hideText(this)"
-            alt="Street in Andalusian hill town.  Summer 2018.">
-        <div id="street_caption" style.display="none"></div>
-    </div>
-    <div class="wrapper">
-        <img src='../images/arcos_landscape.JPG' id="landscape" onmouseover="showText(this)"
-            onmouseleave="hideText(this)" alt="Andalusian landscape viewed from scenic overlook.  Summer 2018.">
-        <div id="landscape_caption" style.display="none"></div>
-    </div>
-</div>
+</main>
 
 </html>
