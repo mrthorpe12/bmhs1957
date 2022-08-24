@@ -1,2 +1,4 @@
-# SI 539 Final Portfolio
-Final portfolio for SI 539 (instructor: Colleen van Lent).  Portfolio contains information related to the author's trip to Spain in summer 2018.  Incorporates grid and flexbox.
+# BMHS Class of 1957 Website
+Webpage for Beloit (Wisconsin) Memorial High School Class of '57.  Page contains the following elements: homepage, photo gallery with photos of 60th class reunion, list of class members, and third-party form for users to add/edit contact info.
+Site may also incorporate the following: Photo galleries containing photos from earlier class reunions and/or historic photos of Beloit Memorial.  This site will endeavor to create a space where members of the Class of '57, as well as the interested public,
+can share their memories about Beloit Memorial and what life was like in 1950s Wisconsin.
