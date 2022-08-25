@@ -1,4 +1,4 @@
 # BMHS Class of 1957 Website
-Webpage for Beloit (Wisconsin) Memorial High School Class of '57.  Page contains the following elements: homepage, page with info about previous class reunions, page with info about class members, and third-party form for users to add/edit contact info.
-Site may also incorporate the following: Photo galleries containing historic photos of Beloit Memorial and/or the city of Beloit.  This site will endeavor to create a space where members of the Class of '57, as well as the interested public,
+Webpage for Beloit (Wisconsin) Memorial High School Class of '57.  Page contains the following elements: homepage, info about previous class reunions, info about planned events, info about classmates, and photo galleries of previous reunions/class birthdays.  Site also contains links to relevant external sites, as well as a snapshot of life in 1957.
+This website is meant to provide a space where members of the Class of '57, as well as the interested public,
 can share their memories about Beloit Memorial and what life was like in 1950s Wisconsin.
