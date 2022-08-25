@@ -211,10 +211,11 @@ img:hover {
 }
 
 .dropbtn {
-	background-color: #04AA6D;
-	color: white;
-	padding: 16px;
-	font-size: 16px;
+	background-color: #466995;
+	color: black;
+	/* padding: 16px; */
+	font-size: 1em;
+	font-family: 'PrintFont', Arial, sans-serif;
 	border: none;
 }
 
@@ -248,7 +249,9 @@ img:hover {
 }
 
 .dropdown:hover .dropbtn {
-	background-color: #3e8e41;
+	/* background-color: #3e8e41; */
+	text-transform: uppercase;
+	color: white;
 }
 
 @media (prefers-reduced-motion) {
